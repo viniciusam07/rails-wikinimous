@@ -1,5 +1,9 @@
+<%= stylesheet_link_tag "gollum_editor/gollum" %>
+<%= javascript_include_tag "gollum_editor/gollum" %>
+
 <%= simple_form_for(@article) do |f| %>
   <%= f.input :title  %>
   <%= f.input :content, rows: 15 %>
+  <%= f.gollum_editor :content %>
   <%= f.submit %>
 <% end %>
